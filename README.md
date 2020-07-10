@@ -13,7 +13,7 @@ Code for the [VizWiz Image Quality Issues Dataset](https://vizwiz.org/tasks-and-
 ```./api```
 - ```load_annotations.ipynb```: 
 This file shows how to compile [VizWiz-VQA](https://vizwiz.org/tasks-and-datasets/vqa/) and [VizWiz-ImageQualityIssues](https://vizwiz.org/tasks-and-datasets/image-quality-issues/) annotations 
-saved in ```./annotations``` into arrays for further use. Compiled files are saved in ```./data```.
+saved in ```./annotations``` into arrays for further use, such as Tensorflow Dataset as in ```./utils/DatasetAPI_to_tensor.py```. Compiled files are saved in ```./data```.
 
 
 ```./annotations```
@@ -69,7 +69,7 @@ We use average precision as the evaluation metric.
 #### Recognizability prediction ####
 Avg. precision of **unrecognizability**:
 
-| Feature maps    | Validation set | Test-dev | Test-Standard|
+| Feature maps    | Validation set | Test-dev | Test-standard|
 | :-------------: |:--------------:| :-------:|:------------:|
 | Detectron       | 79.44          | 77.36    | 78.49        |
 | Resnet-152      | 80.17          | 77.82    | 78.69        |
@@ -77,7 +77,7 @@ Avg. precision of **unrecognizability**:
 #### Answerability and recognizability prediction ####
 The format shown below is (avg. precision of **unanswerability** / avg. precision of **unrecognizability given the question is unanswerable**)
 
-| Feature maps    | Validation set | Test-dev      | Test-Standard |
+| Feature maps    | Validation set | Test-dev      | Test-standard |
 | :-------------: |:--------------:| :-----------: |:-------------:|
 | Detectron       | 71.41 / 83.08  | 72.26 / 85.38 | 70.53 / 86.20 |
 | Resnet-152      | 70.97 / 83.12  | 71.26 / 84.90 | 70.39 / 85.13 |
