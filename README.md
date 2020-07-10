@@ -1,5 +1,5 @@
 # VizWiz-QualityIssues
-Code for the VizWiz Image Quality Issues Dataset, including API, baseline models and evaluation method.
+Code for the [VizWiz Image Quality Issues Dataset](https://vizwiz.org/tasks-and-datasets/image-quality-issues/), including API, baseline models and evaluation method.
 
 ## Requirements ##
 - tensorflow v1.14
