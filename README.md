@@ -70,7 +70,7 @@ Avg. precision of **unrecognizability**:
 | Feature maps    | Validation set | Test-dev | Test-Standard|
 | :-------------: |:--------------:| :-------:|:------------:|
 | Detectron       | 79.44          | 77.36    | 78.49        |
-| Resnet-152      | 79.44          | 77.36    | 78.49        |
+| Resnet-152      | 80.17          | 77.82    | 78.69        |
 
 #### Answerability and recognizability prediction ####
 The format shown below is (avg. precision of **unanswerability** / avg. precision of **unrecognizability given the question is unanswerable**)
