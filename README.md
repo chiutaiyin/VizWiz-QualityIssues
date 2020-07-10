@@ -7,8 +7,8 @@ Code for the [VizWiz Image Quality Issues Dataset](https://vizwiz.org/tasks-and-
 
 ## Files ##
 ```./```
-- ```demo_recognizability.ipynb```: demo of recognizability prediction using Detectron or Resnet152 feature maps.
-- ```demo_answerability_recognizability.ipynb```: demo of joint prediction of answerability and recognizability using Detectron or Resnet152 feature maps.
+- ```demo_recognizability.ipynb```: demo of recognizability prediction using Detectron or Resnet152 feature maps and its evaluation.
+- ```demo_answerability_recognizability.ipynb```: demo of joint prediction of answerability and recognizability using Detectron or Resnet152 feature maps and its evaluation.
 
 ```./api```
 - ```load_annotations.ipynb```: 
