@@ -6,7 +6,7 @@ import os
 from functools import partial
 
 def read_npy_file(split, feat_source, tshape, item):
-    data = np.load('/data/taiyin/vizwiz/{}_feat/{}/{}.npy'.format(feat_source, split, item.decode()[:-4]))
+    data = np.load('fmap/{}/{}/{}.npy'.format(feat_source, split, item.decode()[:-4]))
     data = data.reshape(tshape)
     return data.astype(np.float32)
 
