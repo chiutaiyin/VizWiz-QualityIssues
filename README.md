@@ -60,6 +60,24 @@ img_feat = base_model.predict(img)
 - ```DatasetAPI_to_tensor.py```: Tensorflow dataset API for loading data while running the model
 - ```word2vocab_vizwiz```: Ids of tokenized frequent words in the questions in VizWiz VQA dataset
 
+## Evaluation results ##
+We use average precision for evaluation.
+
+### Recognizability prediction ###
+| Feature maps    | Validation set | Test-dev   | Test-Standard|
+| :-------------: |:-------------:| :-----:|:-:|
+| Detectron       | right-aligned | $1600  | |
+| Resnet-152        | centered      |   $12  | |
+
+### Answerability and recognizability prediction ###
+The format shown below is (avg. precision of unanswerability / avg. precision of unrecognizability given the question is unanswerable)
+
+| Feature maps    | Validation set | Test-dev      | Test-Standard |
+| :-------------: |:--------------:| :-----------: |:-------------:|
+| Detectron       | 71.41 / 83.08  | 72.26 / 85.38 | 70.53 / 86.20 |
+| Resnet-152      | 70.97 / 83.12  | 71.26 / 84.90 | 70.39 / 85.13 |
+
+
 ## References ##
 - [VizWiz Project](http://vizwiz.org)
 - [Detectron](https://github.com/facebookresearch/detectron2)
