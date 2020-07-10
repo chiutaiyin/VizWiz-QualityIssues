@@ -61,6 +61,8 @@ img_feat = base_model.predict(img)
 - ```DatasetAPI_to_tensor.py```: Tensorflow dataset API for loading data while running the model
 - ```word2vocab_vizwiz```: Ids of tokenized frequent words in the questions in VizWiz VQA dataset
 
+```./ckpt_rec``` and ```./ckpt_ans_rec```: checkpoints for the recongizability predictor and Up-Down model for answerability and recognizability prediction, respectively.
+
 ## Evaluation results from the baseline models ##
 We use average precision as the evaluation metric.
 
