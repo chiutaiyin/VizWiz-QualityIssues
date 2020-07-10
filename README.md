@@ -21,8 +21,8 @@ saved in ```./annotations``` into arrays for further use. Compiled files are sav
 - ```quality_annotations/train.json, val.json, test.json``` ([VizWiz-ImageQualityIssues](https://vizwiz.org/tasks-and-datasets/image-quality-issues/) training/val/test set)
 
 ```./data```
-- ```quality.json```: arrayed quality annotations compiled from ```./annotations/quality_annotations/train.json, val.json, test.json``` by following ```./api/load_annotations.ipynb```.
-```python. This file is for recognizability prediction.
+- ```quality.json```: arrayed quality annotations compiled from ```./annotations/quality_annotations/train.json, val.json, test.json``` by following ```./api/load_annotations.ipynb```. This file is for recognizability prediction.
+```python 
 data = json.load(open('./data/quality.json')) 
 # data is a dictionary with keys ['train', 'val', 'test'] corresponding to training/val/test set
 # Take training set for example. data['train'] is a dictionary with keys ['image', 'flaws', 'recognizable']
@@ -32,7 +32,8 @@ data = json.load(open('./data/quality.json'))
 # data['train']['recognizable'][0] == recognizability of first image
 ```
 - ```vqa_quality_merger.json```: arrayed vqa and quality annotations; incorporate ```./annotations/vqa_annotations/train.json, val.json, test.json``` into ```quality.json```.
-```python. This file is for joint answerability-recognizability prediction.
+This file is for joint answerability-recognizability prediction.
+```python 
 data = json.load(open('./data/vqa_quality_merger.json')) 
 # In addition to the keys ['image', 'flaws', 'recognizable'], data['train'] has two other keys ['answerable', 'question']
 ```
@@ -63,15 +64,15 @@ img_feat = base_model.predict(img)
 ## Evaluation results from the baseline models ##
 We use average precision as the evaluation metric.
 
-### Recognizability prediction ###
+#### Recognizability prediction ####
 Avg. precision of **unrecognizability**:
 
-| Feature maps    | Validation set | Test-dev   | Test-Standard|
-| :-------------: |:-------------:| :-----:|:-:|
-| Detectron       | right-aligned | $1600  | |
-| Resnet-152        | centered      |   $12  | |
+| Feature maps    | Validation set | Test-dev | Test-Standard|
+| :-------------: |:--------------:| :-------:|:------------:|
+| Detectron       | 79.44          | 77.36    | 78.49        |
+| Resnet-152      | 79.44          | 77.36    | 78.49        |
 
-### Answerability and recognizability prediction ###
+#### Answerability and recognizability prediction ####
 The format shown below is (avg. precision of **unanswerability** / avg. precision of **unrecognizability given the question is unanswerable**)
 
 | Feature maps    | Validation set | Test-dev      | Test-Standard |
